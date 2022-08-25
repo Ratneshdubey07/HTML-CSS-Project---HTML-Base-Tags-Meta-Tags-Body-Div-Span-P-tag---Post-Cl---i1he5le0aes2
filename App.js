@@ -1,18 +1,18 @@
-const content = document.querySelectorAll('.content')
-const listItems = document.querySelectorAll('nav ul li')
-
-
+/const content = document.querySelectorAll('phone')
+const contents = document.querySelectorAll('.content');
+const listItems = document.querySelectorAll('nav ul li');
+console.log(contents, listItems)
 listItems.forEach((item, idx) => {
     item.addEventListener('click', () => {
-       hideAllContents()
-       hideAllItems()
+        hideAllContents()
+        hideAllItems()
 
-       item.classList.add('active')
-       contents[idx].classList.add('show')
+        item.classList.add('active')
+        contents[idx].classList.add('show')
     })
 })
 
-function hideAllContents(){
+function hideAllContents() {
     contents.forEach(content => content.classList.remove('show'))
 }
 
